@@ -1,0 +1,14 @@
+{
+    "item": [
+        {
+            "sys": {"id": 1},
+            "lies": {
+                "title": "Biz haqimizda",
+                "text": "Dilmuradov's Building kompaniyasi 2016-yil 29-avgustda tashkil topgan. Kompaniyamiz asosan qurilish xizmatlari va qurilish materiallarini ishlab chiqarishga asoslangan. Shu kungacha ko'plab yangi inshoatlar va turli xil zamonaviy turarjoylar bizning qurilish kompaniyamiz tomonidan bitkazilib o'z egalariga topshirilgan.",
+                "image": { "lies": { "file": {
+                    "url": "./img/our-company.jpg" } }
+                }
+            }
+        }
+    ]
+}

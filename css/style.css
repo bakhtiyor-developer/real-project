@@ -43,6 +43,31 @@ body {
     font-family: "Lato", sans-serif;
 }
 
+/* container std */
+.container {
+    width: 100vw;
+    margin: 0 auto;
+    max-width: 1170px;
+}
+
+.body-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+@media (max-width: 1440px) {
+    .body-image {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: auto;
+    }
+}
+
 /* navbar */
 .navbar {
     background: var(--mainWhite);
@@ -54,6 +79,7 @@ body {
     align-items: center;
     background: rgb(231, 226, 221);
     z-index: 1;
+    box-shadow: 0px 23px 30px 4px rgba(34, 60, 80, 0.2);
 }
 
 .navbar-center {
@@ -67,8 +93,6 @@ body {
     justify-content: space-between;
     padding: 0 1.5rem;
 }
-
-
 
 .cart-btn {
     position: relative;
@@ -122,8 +146,8 @@ body {
 /* Hero */
 .hero {
     min-height: calc(100vh - 70px);
-    background: url('../img/hero-bg.jpg') center/cover no-repeat;
     display: flex;
+    background: transparent;
     align-items: center;
     justify-content: center;
 }
@@ -150,20 +174,21 @@ body {
     font-size: 1rem;
     background: var(--primaryColor);
     color: var(--mainBlack);
-    border: 1px solid var(--primaryColor);
+    border: 2px solid var(--primaryColor);
     transition: var(--mainTransition);
+    font-weight: bold;
     cursor: pointer;
 }
 
-.banner:hover {
+.banner-btn:hover {
     background: transparent;
+    color: var(--primaryColor);
 }
 
 .banner:hover .banner-title {
     text-shadow: 0px 0px 5px gray;
 }
 /* end of hero */ 
-
 
 /* products */
 .products {
@@ -323,6 +348,15 @@ body {
     margin-left: 3px;
 }
 
+.navbar__item:hover .dropbar-icon-2 {
+    color: var(--primaryColor);
+}
+
+.navbar__item:hover .navbar__link {
+    color: var(--primaryColor);
+    text-decoration: underline;
+}
+
 .dropbar__list {
     position: absolute;
     z-index: 3;
@@ -341,13 +375,13 @@ body {
     display: none;
 }
 
-.dropbar__list-2 {
-    left: 0.5rem;
+@media (max-width: 500px) {
+    .dropbar__list {
+        width: 100%;
+        right: 0;
+    }
 }
 
-.dropbar--active-2 {
-    display: block;
-}
 
 .nav-icon {
     font-size: 1.5rem;
@@ -363,12 +397,12 @@ body {
         display: block;
     }
 
-    .dropbar--active {
-        display: block;
-    }
-
     .navbar__list {
         display: none;
+    }
+
+    .dropbar--active {
+        display: block;
     }
 }
 
@@ -482,3 +516,112 @@ body {
 }
 /* end of cart footer */
 
+
+.main {
+    border-top: 1px solid lightgray;
+    background-color: rgba(236, 236, 236, 0.9);
+    margin-bottom: 60px;
+}
+
+.main-box {
+    display: flex;
+    height: 550px;
+}
+
+.plan-box {
+    display: flex;
+    height: 550px;
+    padding-bottom: 20px;
+}
+
+.main-img-wrapper, .plan-img-wrapper {
+    width: 40%;
+    height: 100%;
+    background-image: url('../img/our-company.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.plan-img-wrapper {
+    background-image: url('../img/our-company-2.jpg');
+}
+
+.main-content-wrapper {
+    width: 60%;
+    height: 100%;
+    padding: 1rem;
+    padding-left: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main-content-title {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.main-content-text {
+    font-size: 16px;
+    line-height: 26px;
+    max-width: 95%;
+    margin-bottom: 24px;
+}
+
+.main-content-btn {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-right: 30px;
+    padding-left: 30px;
+    width: 200px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--primaryColor);
+    text-decoration: none;
+    color: var(--mainBlack);
+    font-weight: bold;
+    border: 2px solid var(--primaryColor);
+}
+
+.main-content-btn:hover {
+    background-color: transparent;
+    color: var(--primaryColor);
+}
+
+@media (max-width: 850px) {
+    .main-box {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    .plan-box {
+        flex-direction: column-reverse;
+        align-items: center;
+        height: auto;
+    }
+
+    .main-img-wrapper, .plan-img-wrapper {
+        width: 100%;    
+        height: 550px;
+    }
+
+    .main-content-wrapper {
+        width: 90%;
+        padding: 1rem;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 634px) {
+    .main-content-wrapper {
+        width: 100%;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+}
