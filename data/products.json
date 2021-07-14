@@ -1,0 +1,84 @@
+{
+    "item": [
+        {
+            "sys": {"id": 1},
+            "fields": {
+                "title": "Sement",
+                "price": 1000,
+                "image": { "fields": { "file": {
+                    "url": "./img/sement.jpg" } }
+                }
+            }
+        },
+        {
+            "sys": {"id": 2},
+            "fields": {
+                "title": "Oxak",
+                "price": 1200,
+                "image": { "fields": { "file": {
+                    "url": "./img/oxak.jpg" } }
+                }
+            }
+        },
+        {
+            "sys": {"id": 3},
+            "fields": {
+                "title": "Shifer",
+                "price": 53000,
+                "image": { "fields": { "file": {
+                    "url": "./img/shifer.jpg" } }
+                }
+            }
+        },
+        {
+            "sys": {"id": 4},
+            "fields": {
+                "title": "Elektrik lampa",
+                "price": 40000,
+                "image": { "fields": { "file": {
+                    "url": "./img/lampa.jpg" } }
+                }
+            }
+        },
+        {
+            "sys": {"id": 5},
+            "fields": {
+                "title": "Plastik naqsh",
+                "price": 300000,
+                "image": { "fields": { "file": {
+                    "url": "./img/plastik.jpg" } }
+                }
+            }
+        },
+        {
+            "sys": {"id": 6},
+            "fields": {
+                "title": "yumshoq devor aboy",
+                "price": 23000,
+                "image": { "fields": { "file": {
+                    "url": "./img/jidkiy-qogoz.jpg" } }
+                }
+            }
+        },
+        {
+            "sys": {"id": 7},
+            "fields": {
+                "title": "shlakoblok",
+                "price": 3500,
+                "image": { "fields": { "file": {
+                    "url": "./img/shlakoblok.jpg" } }
+                }
+            }
+        },
+        {
+            "sys": {"id": 8},
+            "fields": {
+                "title": "almatura",
+                "price": 80000,
+                "image": { "fields": { "file": {
+                    "url": "./img/almatura.jpg" } }
+                }
+            }
+        }
+    ]
+}
