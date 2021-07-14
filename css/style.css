@@ -198,9 +198,35 @@ body {
 .section-title h2 {
     text-align: center;
     font-size: 2.5rem;
-    margin-bottom: 5rem;
     text-transform: capitalize;
+    margin-left: auto;
+    margin-right: auto;
     letter-spacing: var(--mainSpacing);
+}
+
+.section-title p {
+    margin-bottom: 3rem;
+    text-align: center;
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.title-paragraph-line {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 200px;
+    height: 3px;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    background-color: var(--primaryColor);
+}
+
+@media (max-width: 550px) {
+    .section-title h2, p {
+        width: 90%;
+    }
 }
 
 .products-center {
@@ -348,13 +374,53 @@ body {
     margin-left: 3px;
 }
 
-.navbar__item:hover .dropbar-icon-2 {
+.navbar__item {
+    position: relative;
+}
+
+.navbar__item:last-child {
+    background-color: var(--primaryColor);
+    padding: 13px 30px;
+    border-radius: 24px;
+    color: var(--mainWhite);
+    transition: var(--mainTransition);
+    border: 2px solid var(--primaryColor);
+}
+
+.navbar__item:last-child:hover {
+    background: transparent;
     color: var(--primaryColor);
 }
 
-.navbar__item:hover .navbar__link {
+.navbar__item:last-child:hover .navbar__link {
     color: var(--primaryColor);
-    text-decoration: underline;
+}
+
+.navbar__item:last-child .navbar__link {
+    color: var(--mainWhite);
+}
+
+.navbar__item:not(:last-child)::after {
+    z-index: 3;
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: transparent;
+    content: "";
+}
+
+.navbar__item:not(:last-child):hover::after {
+    background-color: var(--primaryColor);
+}
+
+.navbar__item:not(:last-child) .dropbar-icon-2 {
+    color: var(--primaryColor);
+}
+
+.navbar__item:not(:last-child):hover .navbar__link {
+    color: var(--primaryColor);
 }
 
 .dropbar__list {
@@ -382,7 +448,6 @@ body {
     }
 }
 
-
 .nav-icon {
     font-size: 1.5rem;
     display: none;
@@ -403,6 +468,10 @@ body {
 
     .dropbar--active {
         display: block;
+    }
+
+    .main-plan-line {
+        display: none;
     }
 }
 
@@ -519,19 +588,28 @@ body {
 
 .main {
     border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
     background-color: rgba(236, 236, 236, 0.9);
-    margin-bottom: 60px;
+    margin-bottom: 100px;
 }
 
 .main-box {
     display: flex;
     height: 550px;
+    margin-bottom: 15px;
 }
 
 .plan-box {
     display: flex;
     height: 550px;
-    padding-bottom: 20px;
+    margin-top: 15px;
+}
+
+.main-plan-line {
+    width: 100%;
+    height: 2px;
+    border: none;
+    background: lightgrey;
 }
 
 .main-img-wrapper, .plan-img-wrapper {
@@ -623,5 +701,81 @@ body {
         width: 100%;
         padding-left: 0.5rem;
         padding-right: 0.5rem;
+    }
+}
+
+.footer {
+    background: var(--mainBlack);
+}
+
+.footer-box {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footbar-list, .footbar-social-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.footbar-link {
+    text-decoration: none;
+    color: var(--mainWhite);
+    font-weight: 500;
+}
+
+.footbar-item:not(:first-child) {
+    margin-left: 30px;
+}
+
+.footbar-link:hover, .footbar-social-link:hover {
+    color: var(--primaryColor);
+    text-decoration: underline;
+}
+
+.footbar-social-item:not(:last-child) {
+    margin-right: 15px;
+}
+
+.site__logo__name-2 {
+    font-family: var(--otomanoppe-fonts);
+    color: var(--primaryColor);
+}
+
+.site__logo__name-2:last-child {
+    color: var(--mainWhite);
+    font-size: 15px;
+    margin-top: -4px;
+}
+
+.footbar-social-link {
+    color: var(--mainWhite);
+}
+
+@media (max-width: 700px) {
+    .footer-box {
+        flex-direction: column;
+    }
+
+    .footbar-list {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 550px) {
+    .footbar-list {
+        flex-direction: column;
+    }
+
+    .footbar-item:not(:first-child) {
+        margin-left: 0;
+        margin-top: 20px;
     }
 }

@@ -8,34 +8,9 @@ navBtn.addEventListener('click', (e) => {
     navbarList.classList.toggle('dropbar--active');
 })
 
-
-// class Sources {
-//     async getSrcs() {
-//         try {
-//             let srcResult = await fetch('./data/main.json');
-//             let srcData = await srcResult.json();
-//             let srcElements = srcData.item;
-//             srcElements = srcElements.map(item => {
-//                 const {title, text} = item.lies;
-//                 const {id} = item.sys;
-//                 const image = item.lies.image.lies.file.url;
-//                 return {title, text, id, image}
-//             })
-//         } catch (error) {
-//             return error
-//         }
-//     }
-// }
-
-// class UI {
-
-// }
-
-// class Storage {
-
-// }
-
-
-// document.addEventListener('domContentLoaded', () => {
-    
-// })
+function sendmessage(){
+    chat_id = document.getElementById("chatid").value;
+    token = document.getElementById("token").value;
+    message = document.getElementById("message").value;
+    $.get("https://api.telegram.org/bot"+token+"/sendMessage?text="+message+"&chat_id="+chat_id);
+}
